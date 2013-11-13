@@ -1,11 +1,17 @@
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Project {
 
 	String projectName;
-	ArrayList<Sprint>[] sprints;
+	ArrayList<Sprint> sprints;
 	Team team;
+	
+	Project(String name){
+		this.setProjectName(name);
+		sprints=new ArrayList<Sprint>();
+	}
 	
 	public String getProjectName() {
 		return projectName;
@@ -13,10 +19,10 @@ public class Project {
 	public void setProjectName(String projectName) {
 		this.projectName = projectName;
 	}
-	public ArrayList<Sprint>[] getSprints() {
+	public ArrayList<Sprint> getSprints() {
 		return sprints;
 	}
-	public void setSprints(ArrayList<Sprint>[] sprints) {
+	public void setSprints(ArrayList<Sprint> sprints) {
 		this.sprints = sprints;
 	}
 	public Team getTeam() {
@@ -26,11 +32,9 @@ public class Project {
 		this.team = team;
 	}
 	public void addSprint(Sprint sprint){
-		
+		sprints.add(sprint);
 	}
 	public Sprint getSprint(int pos){
-		
-		
-		return null;
+		return sprints.get(pos);
 	}
 }

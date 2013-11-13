@@ -8,8 +8,7 @@ public class ProjectTest {
 Project project;
 	@Before
 	public void setUp() throws Exception {
-		project = new Project();
-		project.setProjectName("ElectionSystem");
+		project = new Project("ElectionSystem");
 	}
 
 	@Test
@@ -24,5 +23,6 @@ Project project;
 		assertEquals("NewElectionSystem",project.getProjectName());
 		//fail("Not yet implemented");
 	}
+	
 
 }
