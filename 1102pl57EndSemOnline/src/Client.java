@@ -52,6 +52,14 @@ public class Client {
 		sprint1.addStory(vote);
 		System.out.println("\nNew sprint created with the following stories:\n\t "+sprint1.getStory(0).getStory());
 		
+		ScrumBoard board=new ScrumBoard(sprint1);
+		System.out.println("\nNew Scrum board created with Sprint: "+board.getSprint());
+		
+		System.out.println("Scrum Board Contents:");
+		board.getToDoTasks();
+		board.getWIPTasks();
+		board.getDoneTasks();
+
 	}
 
 }

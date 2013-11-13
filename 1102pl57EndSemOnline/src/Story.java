@@ -37,5 +37,9 @@ public class Story {
 	public Task getTask(int pos){
 		return tasks.get(pos);
 	}
+
+	public ArrayList<Task> getTasks() {
+		return this.tasks;
+	}
 	
 }
