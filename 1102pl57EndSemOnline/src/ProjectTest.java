@@ -6,9 +6,12 @@ import org.junit.Test;
 
 public class ProjectTest {
 Project project;
+Team team;
 	@Before
 	public void setUp() throws Exception {
 		project = new Project("ElectionSystem");
+		team=new Team();
+		team.setProductOwner("RSWagh");
 	}
 
 	@Test
@@ -24,5 +27,11 @@ Project project;
 		//fail("Not yet implemented");
 	}
 	
-
+	@Test
+	public void testSetTeam() {
+		project.setTeam(team);
+		assertEquals("RSWagh",project.getTeam().getProductOwner());
+		//fail("Not yet implemented");
+	}
+	
 }

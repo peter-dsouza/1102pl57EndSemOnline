@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class Project {
@@ -36,5 +35,8 @@ public class Project {
 	}
 	public Sprint getSprint(int pos){
 		return sprints.get(pos);
+	}
+	public void addTeam(Team team){
+		this.setTeam(team);
 	}
 }
