@@ -7,7 +7,7 @@ public class Sprint {
 	
 	Sprint(int maxSP){
 		this.maxSP=maxSP;
-		stories=null;
+		stories=new ArrayList<Story>();
 	}
 	
 	
@@ -31,7 +31,7 @@ public class Sprint {
 
 
 	public void addStory(Story story){
-		if((20 - getStoryPointSum())<story.getStoryPoints()){
+		if((this.maxSP - getStoryPointSum())>=story.getStoryPoints()){
 			stories.add(story);
 		}
 		else System.out.println("Cannot fit Story: "+story.getStory()+" into this sprint...");
@@ -43,8 +43,8 @@ public class Sprint {
 	
 	public int getStoryPointSum(){
 		int sum=0;
-		for(int i=0; i<stories.size(); i++){
-			sum=sum+stories.get(i).getStoryPoints();
+		for(int i=0; i<this.stories.size(); i++){
+			sum=sum+this.stories.get(i).getStoryPoints();
 		}
 		return sum;
 	}

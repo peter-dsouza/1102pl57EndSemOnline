@@ -26,6 +26,7 @@ Task task;
 
 	@Test
 	public void testGetStory() {
+		register.setStoryPoints(7);
 		sprint1.addStory(register);
 		assertEquals("Register",sprint1.getStory(0).getStory());
 		//fail("Not yet implemented");
