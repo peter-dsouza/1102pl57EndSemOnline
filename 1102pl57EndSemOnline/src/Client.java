@@ -59,7 +59,12 @@ public class Client {
 		board.getToDoTasks();
 		board.getWIPTasks();
 		board.getDoneTasks();
-
+		
+		team.getMember(0).setTask(task1);
+		System.out.println("\n"+team.getMember(0).getName()+" assigned "+team.getMember(0).getTask().getTask());
+		
+		team.getMember(1).setTask(task2);
+		System.out.println("\n"+team.getMember(1).getName()+" assigned "+team.getMember(1).getTask().getTask());
 	}
 
 }
