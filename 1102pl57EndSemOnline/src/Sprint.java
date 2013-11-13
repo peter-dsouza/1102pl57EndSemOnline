@@ -7,6 +7,7 @@ public class Sprint {
 	
 	Sprint(int maxSP){
 		this.maxSP=maxSP;
+		stories=null;
 	}
 	
 	

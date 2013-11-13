@@ -11,40 +11,40 @@ public class TeamTest {
 	@Before
 	public void setUp() throws Exception {
 		team=new Team();
-		team.setProductOwner("RSWagh");
-		team.setScrumMaster("Krishna");
+		team.setProductOwner(new Member("RSWagh"));
+		team.setScrumMaster(new Member("Krishna"));
 	}
 
 	@Test
 	public void testGetProductOwner() {
-		assertEquals("RSWagh",team.getProductOwner());
+		assertEquals("RSWagh",team.getProductOwner().getName());
 		//fail("Not yet implemented");
 	}
 
 	@Test
 	public void testSetProductOwner() {
-		team.setProductOwner("Saviana");
-		assertEquals("Saviana",team.getProductOwner());
+		team.setProductOwner(new Member("Saviana"));
+		assertEquals("Saviana",team.getProductOwner().getName());
 		//fail("Not yet implemented");
 	}
 
 	@Test
 	public void testGetScrumMaster() {
-		assertEquals("Krishna",team.getScrumMaster());
+		assertEquals("Krishna",team.getScrumMaster().getName());
 		//fail("Not yet implemented");
 	}
 
 	@Test
 	public void testSetScrumMaster() {
-		team.setScrumMaster("Melanie");
-		assertEquals("Melanie",team.getScrumMaster());
+		team.setScrumMaster(new Member("Melanie"));
+		assertEquals("Melanie",team.getScrumMaster().getName());
 		//fail("Not yet implemented");
 	}
 
 	@Test
 	public void testAddMember() {
-		team.addMember("Nadia");
-		assertEquals("Nadia",team.getMember(0));
+		team.addMember(new Member("Nadia"));
+		assertEquals("Nadia",team.getMember(0).getName());
 	}
 
 }

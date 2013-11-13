@@ -7,12 +7,15 @@ import org.junit.Test;
 public class SprintTest {
 Sprint sprint1;
 Story register;
+Task task;
 
 	@Before
 	public void setUp() throws Exception {
 		sprint1=new Sprint(20);
-		register=new Story("Register");
-		
+		register=new Story("Register",7);
+		task=new Task();
+		task.setTask("DesignUI");
+		register.addTask(task);
 	}
 
 	@Test

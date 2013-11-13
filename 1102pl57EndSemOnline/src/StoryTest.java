@@ -10,7 +10,7 @@ Task task;
 
 	@Before
 	public void setUp() throws Exception {
-		story=new Story("Register");
+		story=new Story("Register",7);
 		task=new Task();
 	}
 

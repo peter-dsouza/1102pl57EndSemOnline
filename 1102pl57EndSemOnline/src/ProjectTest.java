@@ -11,7 +11,7 @@ Team team;
 	public void setUp() throws Exception {
 		project = new Project("ElectionSystem");
 		team=new Team();
-		team.setProductOwner("RSWagh");
+		team.setProductOwner(new Member("RSWagh"));
 	}
 
 	@Test
@@ -30,7 +30,7 @@ Team team;
 	@Test
 	public void testSetTeam() {
 		project.setTeam(team);
-		assertEquals("RSWagh",project.getTeam().getProductOwner());
+		assertEquals("RSWagh",project.getTeam().getProductOwner().getName());
 		//fail("Not yet implemented");
 	}
 	

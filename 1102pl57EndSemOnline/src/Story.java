@@ -7,8 +7,9 @@ public class Story {
 	int priority;
 	ArrayList<Task> tasks;
 	
-	Story(String name){
+	Story(String name, int points){
 		this.setStory(name);
+		this.setStoryPoints(points);
 		tasks= new ArrayList<Task>();
 	}
 	

@@ -2,39 +2,39 @@ import java.util.ArrayList;
 
 
 public class Team {
-	String productOwner;
-	String scrumMaster;
-	ArrayList<String> members;
+	Member productOwner;
+	Member scrumMaster;
+	ArrayList<Member> members;
 	
 	Team(){
-		members = new ArrayList<String>();
+		members = new ArrayList<Member>();
 	}
 	
-	public String getProductOwner() {
+	public Member getProductOwner() {
 		return productOwner;
 	}
-	public void setProductOwner(String productOwner) {
+	public void setProductOwner(Member productOwner) {
 		this.productOwner = productOwner;
 	}
-	public String getScrumMaster() {
+	public Member getScrumMaster() {
 		return scrumMaster;
 	}
-	public void setScrumMaster(String scrumMaster) {
+	public void setScrumMaster(Member scrumMaster) {
 		this.scrumMaster = scrumMaster;
 	}
-	public ArrayList<String> getMembers() {
+	public ArrayList<Member> getMembers() {
 		return members;
 	}
-	public void setMembers(ArrayList<String> members) {
+	public void setMembers(ArrayList<Member> members) {
 		this.members = members;
 	}
-	public void addMember(String mmbr){
-		if(this.members.size()==4){
+	public void addMember(Member mmbr){
+		if(this.members.size()>4){
 			this.members.add(mmbr);		
 		}
 		else System.out.println("Cannot add member. Team is full.");
 	}
-	public String getMember(int pos){
+	public Member getMember(int pos){
 		return this.members.get(pos);
 	}
 	
