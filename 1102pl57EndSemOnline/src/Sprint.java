@@ -30,10 +30,21 @@ public class Sprint {
 
 
 	public void addStory(Story story){
-		stories.add(story);
+		if((20 - getStoryPointSum())<story.getStoryPoints()){
+			stories.add(story);
+		}
+		else System.out.println("Cannot fit Story: "+story.getStory()+" into this sprint...");
 	}
 	
 	public Story getStory(int pos){
 		return stories.get(pos);
+	}
+	
+	public int getStoryPointSum(){
+		int sum=0;
+		for(int i=0; i<stories.size(); i++){
+			sum=sum+stories.get(i).getStoryPoints();
+		}
+		return sum;
 	}
 }

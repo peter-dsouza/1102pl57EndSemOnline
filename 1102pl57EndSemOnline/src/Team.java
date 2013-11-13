@@ -29,7 +29,10 @@ public class Team {
 		this.members = members;
 	}
 	public void addMember(String mmbr){
-		this.members.add(mmbr);
+		if(this.members.size()==4){
+			this.members.add(mmbr);		
+		}
+		else System.out.println("Cannot add member. Team is full.");
 	}
 	public String getMember(int pos){
 		return this.members.get(pos);
